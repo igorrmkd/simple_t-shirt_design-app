@@ -5,12 +5,12 @@
 
 .sample-canvas {
   position: absolute;
-  top: 160px;
+  top: 260px;
   left: 222px;
   z-index: 10;
   width: 200px;
   height: 280px;
-  background-color: rgba(0, 128, 128, 0.2);
+  background-color: rgba(253, 253, 253, 0.1);
 }
 
 /* .upper-canvas {
@@ -20,7 +20,8 @@
 
 .shirt {
   position: absolute;
-  top: 60px;
+  top: 160px;
   left: 100px;
   z-index: 9;
+  background-color: rgb(57, 80, 94);
 }
