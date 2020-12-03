@@ -1,5 +1,5 @@
 import "./App.css";
-
+import theShirt from "./img/background_tshirt.png";
 import React from "react";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 
@@ -18,6 +18,7 @@ export default function App() {
       <button onClick={onAddCircle}>Add circle</button>
       <button onClick={onAddRectangle}>Add Rectangle</button>
       <FabricJSCanvas className="sample-canvas" onReady={onReady} />
+      <img src={theShirt} alt="theShirt" className="shirt" />
     </div>
   );
 }
