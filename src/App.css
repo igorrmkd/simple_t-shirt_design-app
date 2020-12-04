@@ -5,23 +5,10 @@
 
 .sample-canvas {
   position: absolute;
-  top: 260px;
+  top: 400px;
   left: 222px;
   z-index: 10;
   width: 200px;
   height: 280px;
   background-color: rgba(253, 253, 253, 0.1);
-}
-
-/* .upper-canvas {
-  width: 200px;
-  height: 280px;
-} */
-
-.shirt {
-  position: absolute;
-  top: 160px;
-  left: 100px;
-  z-index: 9;
-  background-color: rgb(57, 80, 94);
 }
