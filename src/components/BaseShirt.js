@@ -8,7 +8,6 @@ function BaseShirt() {
   function changeColor(event) {
     event.preventDefault();
     setShirtColor(event.target.className);
-    console.log(event);
   }
 
   return (
