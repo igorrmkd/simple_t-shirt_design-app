@@ -1,0 +1,9 @@
+.main-canvas {
+  /* position: absolute; */
+  top: 200px;
+  /* left: 600px; */
+  z-index: 10;
+  width: 80vh;
+  height: 80vh;
+  background-color: orange;
+}
