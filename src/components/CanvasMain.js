@@ -1,9 +1,11 @@
 import "./CanvasMain.css";
-import React from "react";
+import React, {useContext} from "react";
 // import BaseShirt from "./components/BaseShirt";
+import { ColorContext } from "./colorContext";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 
-function CanvasMain() {
+function CanvasMain(props) {
+  const { updateColor } = useContext(ColorContext);
   const { editor, onReady } = useFabricJSEditor();
   const onAddCircle = () => {
     editor.addCircle();
@@ -21,7 +23,9 @@ function CanvasMain() {
       <button onClick={onAddCircle}>Add circle</button>
       <button onClick={onAddRectangle}>Add Rectangle</button>
       <button onClick={onAddLine}>Add Line</button>
+      <div className="bigCanvas" style={{backgroundColor: updateColor}}>
       <FabricJSCanvas className="main-canvas" onReady={onReady} />
+      </div>
     </div>
   );
 }
