@@ -5,23 +5,29 @@
 
 .fullView {
   position: apsolute;
+  width: 99vw;
   /* background-color: royalblue; */
+  display: flex;
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
 }
 
 .imgCanvasColor {
   /* background-color: violet; */
   border: 5px double slategrey;
-  width: 40rem;
+  width: 28.25rem;
   display: flex;
   flex-direction: column;
 }
 
 .imageCanvasWrap {
   /* background-color: magenta; */
-  margin-top: 2rem;
+  border-top: 5px double slategrey;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
   width: 28.25rem;
   height: 34.25rem;
 }

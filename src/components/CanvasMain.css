@@ -1,9 +1,16 @@
+.mainCanvasDiv {
+  border: 5px double slategrey;
+}
+
 .main-canvas {
-  /* position: absolute; */
-  top: 200px;
-  /* left: 600px; */
-  z-index: 10;
+  border-top: 5px double slategrey;
   width: 80vh;
-  height: 80vh;
-  background-color: orange;
+  margin-top: 1.95rem;
+  z-index: 10;
+  height: 70vh;
+  /* background-color: rgba(255, 166, 0, 0.568); */
+}
+
+.main-canvas .upper-canvas {
+  background-color: rgba(253, 253, 253, 0);
 }

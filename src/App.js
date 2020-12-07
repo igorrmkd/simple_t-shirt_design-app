@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import BaseShirt from "./components/BaseShirt";
 // import Canvas from "./components/Canvas";
-// import CanvasMain from "./components/CanvasMain";
+import CanvasMain from "./components/CanvasMain";
 
 export default function App() {
   return (
@@ -10,6 +10,7 @@ export default function App() {
       <h1>Simple t-shirt designer with FabricJS and ReactJS</h1>
       <div className="fullView">
         <BaseShirt />
+        <CanvasMain />
       </div>
     </div>
   );

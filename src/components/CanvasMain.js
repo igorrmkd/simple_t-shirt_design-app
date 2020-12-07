@@ -17,7 +17,7 @@ function CanvasMain() {
 
   return (
     <div className="mainCanvasDiv">
-      <h3>Design here</h3>
+      <h2>Design here</h2>
       <button onClick={onAddCircle}>Add circle</button>
       <button onClick={onAddRectangle}>Add Rectangle</button>
       <button onClick={onAddLine}>Add Line</button>
