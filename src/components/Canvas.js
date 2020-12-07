@@ -5,7 +5,7 @@ import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 
 function Canvas() {
   return (
-    <div className="simpleCanvasDiv">
+    <div>
       <FabricJSCanvas className="sample-canvas" />
     </div>
   );
