@@ -3,7 +3,7 @@ const ColorContext = React.createContext();
 
 class ColorContextProvider extends Component {
   state = {
-    className: "violet"
+    className: "slategrey"
   }
 
   
