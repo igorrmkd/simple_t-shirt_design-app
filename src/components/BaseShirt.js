@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./BaseShirt.css";
 import theShirt from "../img/background_tshirt.png";
+import { ColorContext } from "./colorContext";
 import Canvas from "./Canvas";
 
-function BaseShirt() {
-  const [shirtColor, setShirtColor] = useState("");
-
-  function changeColor(event) {
-    event.preventDefault();
-    setShirtColor(event.target.className);
-  }
-
+function BaseShirt(props) {
+  const { updateColor, changeColor } = useContext(ColorContext);
   return (
     <div className="imgCanvasColor">
       <h2>Change shirt color</h2>
@@ -87,7 +82,7 @@ function BaseShirt() {
           <Canvas />
           <img
             className="shirt"
-            style={{ backgroundColor: shirtColor }}
+            style={ {backgroundColor: updateColor} }
             src={theShirt}
             alt="theShirt"
           />
