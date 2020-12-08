@@ -4,11 +4,12 @@
 
 .main-canvas {
   border-top: 5px double slategrey;
-  width: 80vh;
-  margin-top: 1.95rem;
-  z-index: 10;
-  height: 70vh;
   /* background-color: rgba(255, 166, 0, 0.568); */
+
+}
+
+.bigCanvas {
+
 }
 
 .main-canvas .upper-canvas {
