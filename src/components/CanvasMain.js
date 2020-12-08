@@ -1,7 +1,7 @@
 import "./CanvasMain.css";
 import React, {useContext} from "react";
 // import BaseShirt from "./components/BaseShirt";
-import { ColorContext } from "./colorContext";
+import { ColorContext } from "../contexts/colorContext";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 
 function CanvasMain(props) {

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./BaseShirt.css";
 import theShirt from "../img/background_tshirt.png";
-import { ColorContext } from "./colorContext";
+import { ColorContext } from "../contexts/colorContext";
 import Canvas from "./Canvas";
 
 function BaseShirt(props) {
