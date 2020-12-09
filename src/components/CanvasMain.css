@@ -1,10 +1,21 @@
 .mainCanvasDiv {
   border: 5px double slategrey;
+  
+}
+
+.clearButton{
+  padding-bottom: 1rem;
+  border-radius: 5px
+}
+
+.btns{
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .main-canvas {
   border-top: 5px double slategrey;
-  /* background-color: rgba(255, 166, 0, 0.568); */
+
+
 
 }
 

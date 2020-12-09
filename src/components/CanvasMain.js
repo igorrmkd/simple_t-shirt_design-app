@@ -12,10 +12,10 @@ function CanvasMain(props) {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = `606` * 2;
-    canvas.height = `686` * 2;
-    canvas.style.width = `606px`;
-    canvas.style.height = `686px`;
+    canvas.width = `492` * 2;
+    canvas.height = `692` * 2;
+    canvas.style.width = `492px`;
+    canvas.style.height = `692x`;
 
 
     const context = canvas.getContext("2d")
@@ -62,14 +62,9 @@ function CanvasMain(props) {
   return (
     <div className="mainCanvasDiv">
       <h2>Design here</h2>
-
-
       <div className="clearButton">
-        <button ref={canvasRef} onClick={clearCanvas}>Clear</button>
+        <button className="btns" ref={canvasRef} onClick={clearCanvas}>Clear</button>
       </div>
-
-
-
       <div className="bigCanvas" style={{backgroundColor: updateColor}}>
       <canvas 
       className="main-canvas"

@@ -1,7 +1,6 @@
 import "./Canvas.css";
 import React from "react";
-// import BaseShirt from "./components/BaseShirt";
-import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
+import { FabricJSCanvas } from "fabricjs-react";
 
 function Canvas() {
   return (

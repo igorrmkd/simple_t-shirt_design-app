@@ -13,47 +13,4 @@
   justify-content: space-evenly;
 }
 
-.imgCanvasColor {
-  /* background-color: violet; */
-  border: 5px double slategrey;
-  width: 28.25rem;
-  display: flex;
-  flex-direction: column;
-}
 
-.imageCanvasWrap {
-  /* background-color: magenta; */
-  border-top: 5px double slategrey;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 3rem;
-  width: 28.25rem;
-  height: 34.25rem;
-}
-
-.insideWrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.shirt {
-  z-index: 9;
-  background-color: slategrey;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-}
-
-.sample-canvas {
-  width: 12.5rem;
-  height: 17.5rem;
-  top: 6.5rem;
-  left: 7.7rem;
-  position: absolute;
-  z-index: 10;
-  background-color: rgba(253, 253, 253, 0.1);
-}
