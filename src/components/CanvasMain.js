@@ -54,9 +54,7 @@ function CanvasMain(props) {
   function clearCanvas() {
       const canvas = canvasRef.current;
       const context = canvas.getContext("2d")
-      // context.fillStyle = {backgroundColor: updateColor}
-      context.fillStyle = updateColor
-      context.fillRect(0, 0, canvas.width, canvas.height)
+      context.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   // end clear the canvas
