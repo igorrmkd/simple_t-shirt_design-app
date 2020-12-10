@@ -2,13 +2,11 @@
   border: 5px double slategrey;
 }
 
-.clearButton {
-  padding-bottom: 1rem;
-  border-radius: 5px;
-}
-
 .btns {
   padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0 0.5rem;
+  width: 6.5rem;
+  /* padding: 0.5rem 1rem 0.5rem 1rem; */
 }
 
 .main-canvas {
@@ -16,13 +14,23 @@
 }
 
 .buttonsTop {
-  padding: 0 1rem 0 1rem;
+  margin: 1rem 0 1rem 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center; */
+  justify-content: center;
 }
 .buttonsBottom {
-  padding: 0 1rem 0 1rem;
+  margin: 1rem 0 1rem 0;
   display: flex;
   justify-content: center;
+}
+
+.preview .btns,
+.text .btns {
+  margin-left: 0;
+}
+
+.drawColor .btns,
+.download .btns {
+  margin-right: 0;
 }

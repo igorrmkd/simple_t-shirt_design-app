@@ -4,7 +4,6 @@ import { ColorContext } from "../contexts/colorContext";
 
 function CanvasMain(props) {
   const { updateColor } = useContext(ColorContext);
-  //  Drawing freehand
 
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
@@ -46,17 +45,11 @@ function CanvasMain(props) {
     contextRef.current.stroke();
   };
 
-  // end drawing freehand
-
-  // clear the canvas
-
   function clearCanvas() {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
   }
-
-  // end clear the canvas
 
   return (
     <div className="mainCanvasDiv">
@@ -64,7 +57,14 @@ function CanvasMain(props) {
         <div className="preview">
           <button className="btns">Preview</button>
         </div>
-        <h2>Design here</h2>
+        <div className="erase">
+          <button className="btns">Erase</button>
+        </div>
+        <div className="clearButton">
+          <button className="btns" ref={canvasRef} onClick={clearCanvas}>
+            Clear
+          </button>
+        </div>
         <div className="download">
           <button className="btns">Download</button>
         </div>
@@ -81,17 +81,7 @@ function CanvasMain(props) {
           <button className="btns">Draw</button>
         </div>
         <div className="drawColor">
-          <button className="btns">Brush Color</button>
-        </div>
-
-        <div className="erase">
-          <button className="btns">Erase</button>
-        </div>
-
-        <div className="clearButton">
-          <button className="btns" ref={canvasRef} onClick={clearCanvas}>
-            Clear
-          </button>
+          <button className="btns">Br Color</button>
         </div>
       </div>
 
