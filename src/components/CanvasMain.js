@@ -8,6 +8,7 @@ function CanvasMain(props) {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [brushState, setBrushState] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,6 +25,10 @@ function CanvasMain(props) {
     contextRef.current = context;
   }, []);
 
+  function brushToggle() {
+    setBrushState(!brushState);
+  }
+
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath();
@@ -37,12 +42,11 @@ function CanvasMain(props) {
   };
 
   const draw = ({ nativeEvent }) => {
-    if (!isDrawing) {
-      return;
+    if (isDrawing && brushState) {
+      const { offsetX, offsetY } = nativeEvent;
+      contextRef.current.lineTo(offsetX, offsetY);
+      contextRef.current.stroke();
     }
-    const { offsetX, offsetY } = nativeEvent;
-    contextRef.current.lineTo(offsetX, offsetY);
-    contextRef.current.stroke();
   };
 
   function clearCanvas() {
@@ -78,7 +82,9 @@ function CanvasMain(props) {
         </div>
 
         <div className="draw">
-          <button className="btns">Draw</button>
+          <button className="btns" onClick={brushToggle}>
+            Draw
+          </button>
         </div>
         <div className="drawColor">
           <button className="btns">Br Color</button>
