@@ -1,6 +1,7 @@
 import "./CanvasMain.css";
 import React, { useContext, useRef, useEffect, useState } from "react";
 import { ColorContext } from "../contexts/colorContext";
+import "../lib/jscolor";
 
 function CanvasMain(props) {
   const { updateColor } = useContext(ColorContext);
@@ -78,7 +79,9 @@ function CanvasMain(props) {
           <button className="btns">Type</button>
         </div>
         <div className="textColor">
-          <button className="btns">Text Color</button>
+          <button className="btns" data-jscolor="{value:'#57ADC9'}">
+            Text
+          </button>
         </div>
 
         <div className="draw">
@@ -91,7 +94,9 @@ function CanvasMain(props) {
           </button>
         </div>
         <div className="drawColor">
-          <button className="btns">Br Color</button>
+          <button className="btns" data-jscolor="{value:'#62F4AE'}">
+            Brush
+          </button>
         </div>
       </div>
 

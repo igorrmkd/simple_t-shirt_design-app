@@ -34,3 +34,15 @@
 .download .btns {
   margin-right: 0;
 }
+
+/* color-picker style  */
+.jscolor {
+  border: solid 1px;
+  border-radius: 3px;
+  height: 35px;
+  width: 6.5rem;
+  /* margin-left: 3px; */
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
