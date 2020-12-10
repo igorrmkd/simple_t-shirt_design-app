@@ -1,28 +1,28 @@
 .mainCanvasDiv {
   border: 5px double slategrey;
-  
 }
 
-.clearButton{
+.clearButton {
   padding-bottom: 1rem;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
-.btns{
+.btns {
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .main-canvas {
   border-top: 5px double slategrey;
-
-
-
 }
 
-.bigCanvas {
-
+.buttonsTop {
+  padding: 0 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-.main-canvas .upper-canvas {
-  /* background-color: rgba(253, 253, 253, 0); */
+.buttonsBottom {
+  padding: 0 1rem 0 1rem;
+  display: flex;
+  justify-content: center;
 }

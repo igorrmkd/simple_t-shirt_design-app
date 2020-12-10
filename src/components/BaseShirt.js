@@ -8,7 +8,7 @@ function BaseShirt(props) {
   const { updateColor, changeColor } = useContext(ColorContext);
   return (
     <div className="imgCanvasColor">
-      <h2>Change shirt color</h2>
+      <h2>Preview Shirt</h2>
       <div>
         <button
           className="violet"

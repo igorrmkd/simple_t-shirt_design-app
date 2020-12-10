@@ -7,7 +7,7 @@ import CanvasMain from "./components/CanvasMain";
 export default function App() {
   return (
     <div className="App">
-      <h1>Simple t-shirt designer with FabricJS and ReactJS</h1>
+      <h1>Simple t-shirt designer with Canvas and React</h1>
       <div className="fullView">
         <BaseShirt />
         <CanvasMain />
