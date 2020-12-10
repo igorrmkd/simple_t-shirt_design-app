@@ -82,7 +82,11 @@ function CanvasMain(props) {
         </div>
 
         <div className="draw">
-          <button className="btns" onClick={brushToggle}>
+          <button
+            className="btns"
+            style={{ color: brushState ? "black" : "red" }}
+            onClick={brushToggle}
+          >
             Draw
           </button>
         </div>
