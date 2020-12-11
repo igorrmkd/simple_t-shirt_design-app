@@ -24,19 +24,19 @@ function CanvasMain(props) {
     const context = canvas.getContext("2d");
     context.scale(2, 2);
     context.lineCap = "round";
-    context.strokeStyle = "black";
+    context.strokeStyle = brushColor;
     context.lineWidth = 5;
     contextRef.current = context;
   }, []);
 
-  // function onClickColor(e) {
-  //   console.log(e);
-  // }
-  // function brushColorOnClick(e) {
-  //   console.log(e);
-  //   // console.log(e.target.dataset.jscolor);
-  //   // console.log(e.target.dataset.jscolor.value);
-  // }
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
+    context.lineCap = "round";
+    context.strokeStyle = brushColor;
+    context.lineWidth = 5;
+    contextRef.current = context;
+  }, [brushColor]);
 
   function brushToggle() {
     setBrushState(!brushState);
