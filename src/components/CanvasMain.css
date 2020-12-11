@@ -41,17 +41,19 @@
   justify-content: center;
 }
 
-/* color-picker style  */
-/* .jscolor {
-  border: solid;
-  border-width: 1px;
-  border-radius: 2px;
-  height: 34px;
-  width: 6.575rem;
-  padding: 0;
-  margin: 0 0.375rem 0 0.375rem;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  border-color: slategrey;
-} */
+.brushSize {
+  display: flex;
+}
+
+.sizePlus {
+  width: 3.35rem;
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.sizeMinus {
+  width: 3.35rem;
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

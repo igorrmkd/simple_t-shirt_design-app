@@ -13,6 +13,7 @@ function CanvasMain(props) {
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [brushState, setBrushState] = useState(false);
+  // const [brushSize, setBrushSize] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,7 +25,7 @@ function CanvasMain(props) {
     const context = canvas.getContext("2d");
     context.scale(2, 2);
     context.lineCap = "round";
-    context.strokeStyle = brushColor;
+    context.strokeStyle = "#10bef3";
     context.lineWidth = 5;
     contextRef.current = context;
   }, []);
@@ -37,6 +38,10 @@ function CanvasMain(props) {
     context.lineWidth = 5;
     contextRef.current = context;
   }, [brushColor]);
+
+  // function onClickBrushSize(e) {
+  //   console.log(e);
+  // }
 
   function brushToggle() {
     setBrushState(!brushState);
@@ -87,10 +92,12 @@ function CanvasMain(props) {
       </div>
       <div className="buttonsMiddle">
         <div className="font">
-          <button className="btns">Font</button>
+          <button className="btns sizePlus">+</button>
+          <button className="btns sizeMinus">-</button>
         </div>
         <div className="brushSize">
-          <button className="btns">Br. Size</button>
+          <button className="btns sizePlus">+</button>
+          <button className="btns sizeMinus">-</button>
         </div>
         <div className="Ungroup">
           <button className="btns">Ungroup</button>
@@ -112,13 +119,14 @@ function CanvasMain(props) {
             Draw
           </button>
         </div>
+
+        <div className="erase">
+          <button className="btns">Erase</button>
+        </div>
         <div className="clearButton">
           <button className="btns" ref={canvasRef} onClick={clearCanvas}>
             Clear
           </button>
-        </div>
-        <div className="erase">
-          <button className="btns">Erase</button>
         </div>
       </div>
 
