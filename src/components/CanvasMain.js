@@ -13,7 +13,8 @@ function CanvasMain(props) {
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [brushState, setBrushState] = useState(false);
-  // const [brushSize, setBrushSize] = useState(false);
+  const [brushSize, setBrushSize] = useState(10);
+  // const [fontSize, setFontSize] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -25,8 +26,6 @@ function CanvasMain(props) {
     const context = canvas.getContext("2d");
     context.scale(2, 2);
     context.lineCap = "round";
-    context.strokeStyle = "#10bef3";
-    context.lineWidth = 5;
     contextRef.current = context;
   }, []);
 
@@ -35,13 +34,20 @@ function CanvasMain(props) {
     const context = canvas.getContext("2d");
     context.lineCap = "round";
     context.strokeStyle = brushColor;
-    context.lineWidth = 5;
+    context.lineWidth = brushSize;
     contextRef.current = context;
-  }, [brushColor]);
+    // console.log(context.lineWidth);
+  }, [brushSize, brushColor]);
 
-  // function onClickBrushSize(e) {
-  //   console.log(e);
-  // }
+  function onClickBrushSize(e) {
+    // console.log(e);
+    // console.log(e.target.classList[1]);
+    if (e.target.classList[1] === "sizePlus") {
+      setBrushSize(brushSize + 2);
+    } else if (e.target.classList[1] === "sizePlus" || brushSize > 0) {
+      setBrushSize(brushSize - 2);
+    }
+  }
 
   function brushToggle() {
     setBrushState(!brushState);
@@ -96,8 +102,12 @@ function CanvasMain(props) {
           <button className="btns sizeMinus">-</button>
         </div>
         <div className="brushSize">
-          <button className="btns sizePlus">+</button>
-          <button className="btns sizeMinus">-</button>
+          <button className="btns sizePlus" onClick={onClickBrushSize}>
+            +
+          </button>
+          <button className="btns sizeMinus" onClick={onClickBrushSize}>
+            -
+          </button>
         </div>
         <div className="Ungroup">
           <button className="btns">Ungroup</button>
