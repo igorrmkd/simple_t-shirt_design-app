@@ -1,10 +1,13 @@
 import "./CanvasMain.css";
+import "./PopoverPicker.css";
 import React, { useContext, useRef, useEffect, useState } from "react";
 import { ColorContext } from "../contexts/colorContext";
-import "../lib/jscolor";
+import { PopoverPicker } from "./PopoverPicker";
 
 function CanvasMain(props) {
   const { updateColor } = useContext(ColorContext);
+  const [brushColor, setBrushColor] = useState("#10bef3");
+  const [textColor, setTextColor] = useState("#182c2e");
 
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
@@ -25,6 +28,15 @@ function CanvasMain(props) {
     context.lineWidth = 5;
     contextRef.current = context;
   }, []);
+
+  // function onClickColor(e) {
+  //   console.log(e);
+  // }
+  // function brushColorOnClick(e) {
+  //   console.log(e);
+  //   // console.log(e.target.dataset.jscolor);
+  //   // console.log(e.target.dataset.jscolor.value);
+  // }
 
   function brushToggle() {
     setBrushState(!brushState);
@@ -60,14 +72,10 @@ function CanvasMain(props) {
     <div className="mainCanvasDiv">
       <div className="buttonsTop">
         <div className="textColor">
-          <button className="btns" data-jscolor="{value:'#57ADC9'}">
-            Text
-          </button>
+          <PopoverPicker color={textColor} onChange={setTextColor} />
         </div>
-        <div className="drawColor">
-          <button className="btns" data-jscolor="{value:'#62F4AE'}">
-            Brush
-          </button>
+        <div className="brushColor">
+          <PopoverPicker color={brushColor} onChange={setBrushColor} />
         </div>
 
         <div className="group">
