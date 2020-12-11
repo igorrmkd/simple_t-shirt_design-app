@@ -59,16 +59,33 @@ function CanvasMain(props) {
   return (
     <div className="mainCanvasDiv">
       <div className="buttonsTop">
-        <div className="preview">
-          <button className="btns">Preview</button>
-        </div>
-        <div className="erase">
-          <button className="btns">Erase</button>
-        </div>
-        <div className="clearButton">
-          <button className="btns" ref={canvasRef} onClick={clearCanvas}>
-            Clear
+        <div className="textColor">
+          <button className="btns" data-jscolor="{value:'#57ADC9'}">
+            Text
           </button>
+        </div>
+        <div className="drawColor">
+          <button className="btns" data-jscolor="{value:'#62F4AE'}">
+            Brush
+          </button>
+        </div>
+
+        <div className="group">
+          <button className="btns">Group</button>
+        </div>
+        <div className="upload">
+          <button className="btns">Upload</button>
+        </div>
+      </div>
+      <div className="buttonsMiddle">
+        <div className="font">
+          <button className="btns">Font</button>
+        </div>
+        <div className="brushSize">
+          <button className="btns">Br. Size</button>
+        </div>
+        <div className="Ungroup">
+          <button className="btns">Ungroup</button>
         </div>
         <div className="download">
           <button className="btns">Download</button>
@@ -78,12 +95,6 @@ function CanvasMain(props) {
         <div className="text">
           <button className="btns">Type</button>
         </div>
-        <div className="textColor">
-          <button className="btns" data-jscolor="{value:'#57ADC9'}">
-            Text
-          </button>
-        </div>
-
         <div className="draw">
           <button
             className="btns"
@@ -93,10 +104,13 @@ function CanvasMain(props) {
             Draw
           </button>
         </div>
-        <div className="drawColor">
-          <button className="btns" data-jscolor="{value:'#62F4AE'}">
-            Brush
+        <div className="clearButton">
+          <button className="btns" ref={canvasRef} onClick={clearCanvas}>
+            Clear
           </button>
+        </div>
+        <div className="erase">
+          <button className="btns">Erase</button>
         </div>
       </div>
 
