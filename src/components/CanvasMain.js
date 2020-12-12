@@ -16,6 +16,42 @@ function CanvasMain(props) {
   const [brushSize, setBrushSize] = useState(10);
   // const [fontSize, setFontSize] = useState(false);
 
+  /////////////////////////////////////////////////////---------------
+  let isEraser = false;
+  let drawnArray = [];
+  let erasedArray = [];
+  let eraserColor = updateColor;
+
+  function eraser(e) {
+    isEraser = true;
+
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
+    context.strokeStyle = eraserColor;
+    context.lineWidth = brushSize + 10;
+    storeErased(eraserColor);
+    // console.log(e);
+  }
+
+  // Store Drawn Lines in DrawnArray
+  function storeDrawn(x, y, size, color, erase) {
+    const line = {
+      x,
+      y,
+      size,
+      color,
+      erase,
+    };
+    // console.log(line);
+    drawnArray.push(line);
+  }
+  function storeErased(color) {
+    const line = { color };
+    console.log(line);
+    erasedArray.push(line);
+  }
+  /////////////////////////////////////////////////////---------------
+
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = `492` * 2;
@@ -36,12 +72,9 @@ function CanvasMain(props) {
     context.strokeStyle = brushColor;
     context.lineWidth = brushSize;
     contextRef.current = context;
-    // console.log(context.lineWidth);
   }, [brushSize, brushColor]);
 
   function onClickBrushSize(e) {
-    // console.log(e);
-    // console.log(e.target.classList[1]);
     if (e.target.classList[1] === "sizePlus") {
       setBrushSize(brushSize + 2);
     } else if (e.target.classList[1] === "sizePlus" || brushSize > 0) {
@@ -70,6 +103,7 @@ function CanvasMain(props) {
       const { offsetX, offsetY } = nativeEvent;
       contextRef.current.lineTo(offsetX, offsetY);
       contextRef.current.stroke();
+      storeDrawn(offsetX, offsetY, brushSize, brushColor, isEraser);
     }
   };
 
@@ -122,7 +156,9 @@ function CanvasMain(props) {
         </div>
 
         <div className="erase">
-          <button className="btns">Erase</button>
+          <button className="btns" onClick={eraser}>
+            Erase
+          </button>
         </div>
 
         <div className="draw">
