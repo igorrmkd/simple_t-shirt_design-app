@@ -1,31 +1,41 @@
 #btn-style {
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 2.32rem;
+  height: 2.32rem;
   border-style: solid;
   border-color: slategrey;
-  margin: 2px;
+  margin: 3px;
   outline: none;
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  padding-top: 1rem;
+  margin: 0 0.4rem 0 0.4rem;
+}
+
 .imgCanvasColor {
-  /* background-color: violet; */
   border: 5px double slategrey;
-  width: 28.25rem;
+  width: 30.7rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .imageCanvasWrap {
-  /* background-color: magenta; */
   border-top: 5px double slategrey;
-  margin-top: 1.2rem;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3rem;
-  width: 28.25rem;
-  height: 34.25rem;
+  padding-top: 2rem;
+  width: 30.7rem;
+  height: 37.19rem;
+}
+
+.colorButtons {
+  padding: 1.21rem 0 1.21rem 0;
+  /* padding-top: 1.2rem;
+  padding-bottom: 1.2rem; */
 }
 
 .insideWrapper {

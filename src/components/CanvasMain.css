@@ -12,12 +12,11 @@
   border-color: slategrey;
   outline: none;
   cursor: pointer;
-
-  /* padding: 0.5rem 1rem 0.5rem 1rem; */
 }
 
 .bigCanvas {
   margin-top: 9px;
+  height: 660px;
 }
 .main-canvas {
   border-top: 5px double slategrey;
@@ -25,18 +24,17 @@
 }
 
 .buttonsTop {
-  margin: 0.2rem 0 0.2rem 0;
+  margin: 0.3rem 0 0.4rem 0;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
 }
 .buttonsMiddle {
-  margin: 0.2rem 0 0.2rem 0;
+  margin: 0.2rem 0 0.4rem 0;
   display: flex;
   justify-content: center;
 }
 .buttonsBottom {
-  margin: 0.2rem 0 0.2rem 0;
+  margin: 0.2rem 0 0.4rem 0;
   display: flex;
   justify-content: center;
 }

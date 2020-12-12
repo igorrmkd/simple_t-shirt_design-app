@@ -19,9 +19,9 @@ function CanvasMain(props) {
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = `492` * 2;
-    canvas.height = `692` * 2;
+    canvas.height = `660` * 2;
     canvas.style.width = `492px`;
-    canvas.style.height = `692x`;
+    canvas.style.height = `660x`;
 
     const context = canvas.getContext("2d");
     context.scale(2, 2);
@@ -85,21 +85,24 @@ function CanvasMain(props) {
         <div className="textColor">
           <PopoverPicker color={textColor} onChange={setTextColor} />
         </div>
+        <div className="font">
+          <button className="btns">Font</button>
+        </div>
         <div className="brushColor">
           <PopoverPicker color={brushColor} onChange={setBrushColor} />
         </div>
 
-        <div className="group">
-          <button className="btns">Group</button>
-        </div>
-        <div className="upload">
-          <button className="btns">Upload</button>
+        <div className="save">
+          <button className="btns">Save</button>
         </div>
       </div>
       <div className="buttonsMiddle">
         <div className="font">
           <button className="btns sizePlus">+</button>
           <button className="btns sizeMinus">-</button>
+        </div>
+        <div className="group">
+          <button className="btns">Group</button>
         </div>
         <div className="brushSize">
           <button className="btns sizePlus" onClick={onClickBrushSize}>
@@ -109,9 +112,6 @@ function CanvasMain(props) {
             -
           </button>
         </div>
-        <div className="Ungroup">
-          <button className="btns">Ungroup</button>
-        </div>
         <div className="download">
           <button className="btns">Download</button>
         </div>
@@ -120,6 +120,11 @@ function CanvasMain(props) {
         <div className="text">
           <button className="btns">Type</button>
         </div>
+
+        <div className="erase">
+          <button className="btns">Erase</button>
+        </div>
+
         <div className="draw">
           <button
             className="btns"
@@ -130,9 +135,6 @@ function CanvasMain(props) {
           </button>
         </div>
 
-        <div className="erase">
-          <button className="btns">Erase</button>
-        </div>
         <div className="clearButton">
           <button className="btns" ref={canvasRef} onClick={clearCanvas}>
             Clear

@@ -8,8 +8,22 @@ function BaseShirt(props) {
   const { updateColor, changeColor } = useContext(ColorContext);
   return (
     <div className="imgCanvasColor">
-      <h2>Preview Shirt</h2>
-      <div>
+      <div className="buttons">
+        <div className="canvasOnOff">
+          <button className="btns">Canvas</button>
+        </div>
+        <div className="previewShirt">
+          <button className="btns">Preview</button>
+        </div>
+        <div className="uploadImg">
+          <button className="btns">Upload</button>
+        </div>
+        <div className="download">
+          <button className="btns">Download</button>
+        </div>
+      </div>
+      {/* <h2>Preview Shirt</h2> */}
+      <div className="colorButtons">
         <button
           className="violet"
           id="btn-style"
@@ -82,7 +96,7 @@ function BaseShirt(props) {
           <Canvas />
           <img
             className="shirt"
-            style={ {backgroundColor: updateColor} }
+            style={{ backgroundColor: updateColor }}
             src={theShirt}
             alt="theShirt"
           />
